@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "utm_tracker/version"
-require_relative "utm_tracker/helper"
-require_relative "utm_tracker/matcher"
+require_relative 'utm_tracker/version'
+require_relative 'utm_tracker/helper'
+require_relative 'utm_tracker/matcher'
 
 module UtmTracker
   class Client

@@ -1,0 +1,9 @@
+class <%= migration_class_name %> < ActiveRecord::Migration<%= migration_version %>
+  def up
+    add_column :<%= table_name %>, :utm_data, :jsonb, null: false, default: {}
+  end
+
+  def down
+    remove_column :<%= table_name %>, :utm_data
+  end
+end

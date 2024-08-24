@@ -21,20 +21,15 @@ And then execute:
 
 ## Usage for Rails
 
-1. You need to generate Rails migration and add utm_data into your User model for UTM-tags:
+1. You need to generate Rails migration and add utm_data into your User model for UTM-tags. You can use generator to create a skeleton migration:
+`$ rails g(enerate) utm_tracker User`
 
-`$ rails g migration add_utm_data_to_users utm_data:jsonb`
-
-and add not null and default modificators into rails migrations:
+Which will generate a migration with code like the following:
 ```ruby
 def change
   add_column :users, :utm_data, :jsonb, null: false, default: {}
 end
 ```
-
-and then:
-
-`$ rails db:migrate`
 
 2. Prepare link into user registration controller:
 

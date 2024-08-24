@@ -3,7 +3,7 @@
 RSpec.describe UtmTracker::Client do
   subject { described_class.new(object, utm_data) }
 
-  let(:object) { double('Object', :update! => true)}
+  let(:object) { double('Object', update!: true) }
 
   context 'generate utm tags (if utm_data persist?)' do
     before { subject.call }
